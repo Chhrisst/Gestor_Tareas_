@@ -31,7 +31,7 @@ class UsuarioRepositoryImpl(
                 nombre = nombre
             )
         )
-        // Si el rol seleccionado es diferente de "Pendiente", lo actualizamos en el backend
+        
         if (rol != "Pendiente") {
             val backendRol = when (rol) {
                 "Administrador" -> "ADMIN"
