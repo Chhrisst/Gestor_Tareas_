@@ -4,14 +4,7 @@ import com.org.gestor_tareas.domain.model.Tarea
 import com.org.gestor_tareas.domain.repository.TareaRepository
 import kotlinx.coroutines.delay
 
-// ⚠️ MOCK: datos quemados mientras no tengan el endpoint de tareas en el backend.
-// Cuando lo tengan, sigue el mismo patrón que TecnicoRepositoryImpl:
-//   1. Crea data/remote/dto/TareaDtos.kt (TareaDto, etc.)
-//   2. Crea data/remote/datasource/TareaRemoteDataSource.kt (usa ApiService)
-//   3. Crea data/mapper/TareaMapper.kt (TareaDto.toDomain())
-//   4. Reemplaza el cuerpo de esta clase para usar el RemoteDataSource + Mapper
-// El resto de la app (UseCases, ViewModel, Screen) no cambia en nada, porque
-// todos dependen de la interfaz TareaRepository, no de esta clase.
+
 class TareaRepositoryImpl : TareaRepository {
 
     private val tareasMock = mutableMapOf(
