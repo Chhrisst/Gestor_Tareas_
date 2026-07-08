@@ -4,11 +4,7 @@ import com.org.gestor_tareas.data.remote.datasource.TrabajoRemoteDataSource
 import com.org.gestor_tareas.domain.model.EstadoOrdenes
 import com.org.gestor_tareas.domain.repository.OrdenesRepository
 
-/**
- * Implementación real que cuenta los trabajos de DynamoDB (tabla Trabajos).
- * Como la tabla Trabajos no tiene campo 'estado', todos los registros
- * se cuentan como el total de trabajos programados.
- */
+
 class OrdenesRepositoryImpl(
     private val trabajoRemoteDataSource: TrabajoRemoteDataSource
 ) : OrdenesRepository {
