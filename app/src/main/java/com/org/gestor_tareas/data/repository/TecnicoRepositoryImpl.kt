@@ -27,14 +27,11 @@ class TecnicoRepositoryImpl(
     }
 
     override suspend fun addTecnico(nombre: String, rol: String) {
-        // Obsoleto: Gestión realizada mediante UsuarioRepository
     }
 
     override suspend fun updateTecnico(id: Int, nombre: String, rol: String) {
-        // Obsoleto: Gestión realizada mediante UsuarioRepository
     }
 
     override suspend fun deleteTecnico(id: Int) {
-        // Obsoleto: Gestión realizada mediante UsuarioRepository
     }
 }
