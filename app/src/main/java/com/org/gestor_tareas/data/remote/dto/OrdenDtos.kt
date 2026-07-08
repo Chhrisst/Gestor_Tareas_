@@ -31,9 +31,6 @@ data class UpdateOrdenRequest(
     val estado: String
 )
 
-/**
- * Clase para envolver la lista de órdenes.
- */
 data class OrdenDataDto(
     val items: List<OrdenDto>
 )
