@@ -17,11 +17,9 @@ class EvidenciaRepositoryImpl(
     override suspend fun subirEvidencia(tareaId: String, archivo: File): String {
         val fileName = "evidencia_${tareaId}_${System.currentTimeMillis()}.jpg"
 
-        // 1. Pedimos al backend la URL firmada de S3
         val presigned = remoteDataSource.obtenerUrlPresignada(tareaId, fileName)
             ?: throw Exception("No se pudo obtener la URL de subida")
 
-        // 2. Subimos la imagen directo a S3 con un PUT (esto NO pasa por tu backend)
         val body = archivo.asRequestBody("image/jpeg".toMediaType())
         val request = Request.Builder()
             .url(presigned.uploadUrl)
