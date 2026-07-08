@@ -1,8 +1,5 @@
 package com.org.gestor_tareas.data.remote.dto
 
-/**
- * Representa la orden tal cual viene del servidor (AWS).
- */
 data class OrdenDto(
     val id: Int,
     val codigo: String,
