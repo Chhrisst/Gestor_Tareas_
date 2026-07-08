@@ -31,7 +31,6 @@ class EvidenciaRepositoryImpl(
             throw Exception("Error al subir la evidencia a AWS (código ${response.code})")
         }
 
-        // 3. Avisamos al backend que ya se subió, para que la registre en la BD
         remoteDataSource.registrarEvidencia(RegistrarEvidenciaRequestDto(tareaId, presigned.publicUrl))
 
         return presigned.publicUrl
