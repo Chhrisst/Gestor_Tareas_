@@ -12,9 +12,7 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/**
- * Función para iniciar sesión con Google utilizando Credential Manager.
- */
+//Función para iniciar sesión con Google utilizando Credential Manager en Google Cloud Console
 suspend fun iniciarSesionConGoogle(
     context: Context,
     webClientId: String,
@@ -27,7 +25,7 @@ suspend fun iniciarSesionConGoogle(
     val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
         .setFilterByAuthorizedAccounts(false) // Permite elegir cuentas nuevas
         .setServerClientId(webClientId)
-        .setAutoSelectEnabled(false) // DESACTIVA la selección automática
+        .setAutoSelectEnabled(false) 
         .build()
 
     // Petición de credenciales
